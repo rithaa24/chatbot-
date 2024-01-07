@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <!-- Include the default CSS file for light mode -->
+    <link rel="stylesheet" type="text/css" href="dark-mode.css" id="theme-style">
+</head>
+<body>
+    <!-- Add a container for the toggle button -->
+    <div class="toggle-container">
+        <!-- Add a button to toggle between dark mode and light mode -->
+        <button id="theme-toggle" onclick="toggleTheme()">Toggle Dark/Light Mode</button>
+    </div>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Chatbot</h2>
+        </div>
+        <div class="chat-box" id="chat-box">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    
+    <!-- Include your JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* Use the same variable names with different values for dark mode */
+:root {
+    --background-light: #f9f9f9;
+    --background-dark: #121212;
+    --text-light: #333;
+    --text-dark: #000; /* Dark text color for dark mode */
+    --header-bg-light: #0074e4;
+    --header-bg-dark: #1a1a1a;
+    /* Define other CSS variables for dark mode here */
+}
+
+body {
+    font-family: 'Helvetica', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-dark);
+    color: var(--text-dark); /* Set dark text color for dark mode */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Define dark mode styles for chat-container, chat-header, chat-box, and chat-input using CSS variables */
+/* ... (Dark mode styles for chat-container, chat-header, chat-box, chat-input, etc.) */
+
+
+.chat-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #f9f9f9, #fff); /* Gradient background */
+    border: 1px solid #e0e0e0;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.chat-container:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.chat-header {
+    text-align: center;
+    background-color: var(--header-bg-light);
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+    font-size: 20px;
+}
+
+.chat-box {
+    min-height: 300px;
+    max-height: 400px;
+    overflow-y: scroll;
+    padding: 10px;
+    border-radius: 0 0 20px 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.1); /* Inset shadow for chat box */
+}
+
+.chat-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background-color: var(--header-bg-light);
+    border-radius: 4px;
+}
+
+.chat-input {
+    display: flex;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    padding: 10px;
+    border-radius: 0 0 20px 20px;
+}
+
+#user-input {
+    flex-grow: 2;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#user-input:focus {
+    border-color: var(--header-bg-light);
+}
+
+#send-button {
+    background-color: var(--header-bg-light);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#send-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    animation: pulse 0.6s ease infinite;
+}
+/* Add styles for the toggle button container */
+.toggle-container {
+    position: absolute;
+    top: 10px; /* Adjust the top position as needed */
+    right: 10px; /* Adjust the right position as needed */
+    z-index: 9999; /* Ensure it's above other elements */
+}
+
+/* Add styles for the toggle button */
+#theme-toggle {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #0074e4;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Add styles for the toggle button's active state (dark mode) */
+#theme-toggle.active {
+    background-color: #0074e4;
+    border-color: #fff;
+    transform: rotate(180deg); /* Rotate the button when active */
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
